@@ -1,0 +1,34 @@
+ int i=0;
+    string str="";
+   while(s[i]!=':'){
+       str=str+s[i];
+       i++;
+   }
+   string s1="";
+   for(int i=8;i<=9;i++){
+       s1=s1+s[i];
+   }
+    int num = stoi(str);
+    string strnum;
+    if(s1=="PM"){
+        if(num!=12){
+        num=num+12;
+        strnum = to_string(num);
+    }
+      else {
+       num=num;
+        strnum = to_string(num);
+    }
+    }
+    else if(s1=="AM"&&num==12){
+        strnum="00";
+    }
+    else{
+        num=num;
+        strnum = to_string(num);
+        strnum="0"+strnum;
+    }
+    for(int i=2;i<=7;i++){
+        strnum=strnum+s[i];
+    }
+    return strnum;
