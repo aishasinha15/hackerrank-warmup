@@ -1,0 +1,14 @@
+  long long int l=arr.size();
+   long long  int s=0;
+    for(int i=0;i<l;i++){
+        s=s+arr[i];
+    }
+    long long int min=INT64_MAX,max=0,sum=0;
+    for(int i=0;i<l;i++){
+        sum=s-arr[i];
+        if(sum<min)
+        min=sum;
+         if(sum>max)
+        max=sum;
+    }
+    cout<<min<<" "<<max;
